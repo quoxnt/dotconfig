@@ -5,14 +5,14 @@ Singularity Configuration
 
 [cursor](https://github.com/ful1e5/Bibata_Cursor) ; Bibata cursor theme
 
+[Icons](https://github.com/vinceliuice/Tela-circle-icon-theme) ; Tela Circle Icon Theme
+
 <br><br> 
 
 # Setup:
 
 Base: 
-  [Fedora Sway](https://fedoraproject.org/spins/sway/),
-  [Fedora NetInstall](https://alt.fedoraproject.org/), or 
-  [Fedora Budgie Spin](https://fedoraproject.org/spins/budgie/)
+[Fedora Sway](https://fedoraproject.org/spins/sway/) or [Fedora Budgie Spin](https://fedoraproject.org/spins/budgie/)
 
 [SDDM](https://github.com/sddm/sddm/) ; standalone display manager 
 + w/ theme ; [KDE Store](https://store.kde.org/s/KDE%20Store/p/1283380) ; [Gitlab](https://gitlab.com/pwyde/monochrome-kde)
@@ -21,9 +21,9 @@ Base:
 
 ## Desktop Environment / Window Manager
 
-[Waybar](https://github.com/Alexays/Waybar) ; Bar / Panel for Wayland
-
 [Niri](https://github.com/YaLTeR/niri) ; A scrollable-tiling Wayland compositor.
+
+[Waybar](https://github.com/Alexays/Waybar) ; Bar / Panel for Wayland
 
 <br><br>
 
@@ -51,6 +51,8 @@ Base:
 
 [Fastfetch](https://github.com/fastfetch-cli/fastfetch) ; a neofetch-like tool for fetching system information and displaying it prettily. It is written mainly in C, with performance and customizability in mind. 
 
+[Oh My Posh](https://github.com/JanDeDobbeleer/oh-my-posh) ; terminal prompt customization 
+
 <br>
 
 ### Browsers 
@@ -66,3 +68,7 @@ Base:
 [Tabliss](https://tabliss.io/) ; Custom Browser Tab
 
 [Firefox Profilemaker](https://ffprofile.com/) ; Firefox config setup
+
+### Misc / Tools / Utilities
+
+[CopyQ](https://github.com/hluk/CopyQ)
