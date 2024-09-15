@@ -10,8 +10,8 @@ Singularity Configuration
 # Setup:
 
 Base: 
-  [Fedora Sway](https://fedoraproject.org/spins/sway/)
-  [Fedora NetInstall](https://alt.fedoraproject.org/)
+  [Fedora Sway](https://fedoraproject.org/spins/sway/),
+  [Fedora NetInstall](https://alt.fedoraproject.org/), or 
   [Fedora Budgie Spin](https://fedoraproject.org/spins/budgie/)
 
 [SDDM](https://github.com/sddm/sddm/) ; standalone display manager 
