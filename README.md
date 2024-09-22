@@ -1,8 +1,6 @@
 # singularity
 Singularity Configuration
 
-[wallpaper](https://x.com/ceresfauna/status/1562638795572318208)
-
 [cursor](https://github.com/ful1e5/Bibata_Cursor) ; Bibata cursor theme
 
 [Icons](https://github.com/vinceliuice/Tela-circle-icon-theme) ; Tela Circle Icon Theme
