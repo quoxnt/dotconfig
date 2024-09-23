@@ -1,9 +1,11 @@
 # singularity
 Singularity Configuration
 
-[cursor](https://github.com/ful1e5/Bibata_Cursor) ; Bibata cursor theme
+[Cursor](https://github.com/ful1e5/Bibata_Cursor) ; Bibata cursor theme 
 
-[Icons](https://github.com/vinceliuice/Tela-circle-icon-theme) ; Tela Circle Icon Theme
+[Icons](https://github.com/vinceliuice/Tela-circle-icon-theme) ; Tela Circle Icon Theme 
+
+[Font](https://github.com/0xType/0xProto) ; 0xProto Nerd Fonts 
 
 <br><br> 
 
