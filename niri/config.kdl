@@ -61,9 +61,7 @@ input {
 // >> External Monitor Left + Laptop Right Setup
 // >> (Un)Comment accordingly
 
-/-output "eDP-1" {
-    // Uncomment this line to disable this output.
-    // off
+output "eDP-1" {
     
     mode "1920x1080@60.002"
 
@@ -76,9 +74,9 @@ input {
     position x=1920 y=0
 }
 
-/-output "HDMI-A-1"{
+output "HDMI-A-1"{
 
-    mode "1920x1080@100.087"
+    mode "1920x1080@100.000"
 
     position x=0 y=0
 }
@@ -88,7 +86,7 @@ input {
 
 layout {
 
-    gaps 16
+    gaps 12
 
     center-focused-column "on-overflow"
 
@@ -129,7 +127,7 @@ layout {
 
     focus-ring {
 
-        width 2
+        width 4
         
         active-color "#00c4a8"
         // active-gradient from="#00ecc4" to="#720072" angle=135
@@ -139,9 +137,9 @@ layout {
     }
 
     struts {
-        left 32
-        right 32
-        top 8
+        left 16
+        right 16
+        // top 8
         // bottom 64
     }
 }
@@ -152,12 +150,13 @@ layout {
 // See the binds section below for more spawn examples.
 // spawn-at-startup "alacritty" "-e" "fish"
 
-spawn-at-startup "swaybg" "-i" "%h/.config/background"
+// spawn-at-startup "swaybg" "-i" "~h/.config/background"
+// spawn-at-startup "waybar"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
 // Additionally, clients will be informed that they are tiled, removing some rounded corners.
-// prefer-no-csd
+prefer-no-csd
 
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
@@ -212,10 +211,17 @@ binds {
     Super+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+T { spawn "alacritty"; }
+    Super+T { spawn "alacritty"; }
     Super+Space {spawn "fuzzel";}
-    Mod+D { spawn "fuzzel"; }
-    Super+Alt+L { spawn "swaylock"; }
+    Super+Alt+Backspace { spawn "swaylock"; }
+
+    // >> "Panel / Taskbar / Dock" apps
+    Super+1 { spawn "nautilus"; }
+    Super+2 { spawn "flatpak" "run" "com.vscodium.codium";}
+    Super+3 { spawn "flatpak" "run" "io.gitlab.librewolf-community"; }
+    Super+4 { spawn "flatpak" "run" "io.gitlab.librewolf-community" "--private-window"; }
+    Super+5 { spawn "firefox"; }
+    Super+6 { spawn "flatpak" "run" "one.ablaze.floorp"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
@@ -223,12 +229,19 @@ binds {
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
-    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+    Alt+XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SOURCE@" "0.05+"; }
+    Alt+XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SOURCE@" "0.05-"; }
 
-    Mod+Q { close-window; }
+    // Setup for brightness up
+    // XF86MonBrightnessUp { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01+"; }
+    // Setup for brightness down
+    // XF86MonBrightnessDown { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01-"; }
+
+    Super+Q { close-window; }
 
     Super+Left    { focus-column-left; }
     Super+Down    { focus-window-down; }
@@ -240,107 +253,40 @@ binds {
     Super+Ctrl+Up    { move-window-up; }
     Super+Ctrl+Right { move-column-right; }
 
-    Super+Home { focus-column-first; }
-    Super+End  { focus-column-last; }
-    Super+Ctrl+Home { move-column-to-first; }
-    Super+Ctrl+End  { move-column-to-last; }
+    Super+BracketLeft   { focus-column-first; }
+    Super+BracketRight  { focus-column-last; }
+    Super+Ctrl+BracketLeft  { move-column-to-first; }
+    Super+Ctrl+BracketRight { move-column-to-last; }
 
     Super+Shift+Left  { focus-monitor-left; }
     Super+Shift+Down  { focus-monitor-down; }
     Super+Shift+Up    { focus-monitor-up; }
     Super+Shift+Right { focus-monitor-right; }
 
-    Super+Shift+Ctrl+Left  { move-column-to-monitor-left; }
-    Super+Shift+Ctrl+Down  { move-column-to-monitor-down; }
-    Super+Shift+Ctrl+Up    { move-column-to-monitor-up; }
-    Super+Shift+Ctrl+Right { move-column-to-monitor-right; }
+    Super+Shift+Ctrl+Left  { move-window-to-monitor-left; }
+    Super+Shift+Ctrl+Down  { move-window-to-monitor-down; }
+    Super+Shift+Ctrl+Up    { move-window-to-monitor-up; }
+    Super+Shift+Ctrl+Right { move-window-to-monitor-right; }
 
-    // Alternatively, there are commands to move just a single window:
-    // Super+Shift+Ctrl+Left  { move-window-to-monitor-left; }
-    // ...
-
-    // And you can also move a whole workspace to another monitor:
-    // Super+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
-    // ...
+    // >> Using Up|Down controls with workspaces in this context is more intuitive than using Super+[number], thus just use Super+Page_Up|Down to navigate 
 
     Super+Page_Down      { focus-workspace-down; }
     Super+Page_Up        { focus-workspace-up; }
-    Super+Ctrl+Page_Down { move-column-to-workspace-down; }
-    Super+Ctrl+Page_Up   { move-column-to-workspace-up; }
-
-    // Alternatively, there are commands to move just a single window:
-    // Super+Ctrl+Page_Down { move-window-to-workspace-down; }
-    // ...
+    Super+Ctrl+Page_Down { move-window-to-workspace-down; }
+    Super+Ctrl+Page_Up   { move-window-to-workspace-up; }
 
     Super+Shift+Page_Down { move-workspace-down; }
     Super+Shift+Page_Up   { move-workspace-up; }
-    // Super+Shift+U         { move-workspace-down; }
-    // Super+Shift+I         { move-workspace-up; }
 
-    // You can bind mouse wheel scroll ticks using the following syntax.
-    // These binds will change direction based on the natural-scroll setting.
-    //
-    // To avoid scrolling through workspaces really fast, you can use
-    // the cooldown-ms property. The bind will be rate-limited to this value.
-    // You can set a cooldown on any bind, but it's most useful for the wheel.
-    Super+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
-    Super+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
-    Super+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
-    Super+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
+    Super+WheelScrollDown       cooldown-ms=200 { focus-workspace-down; }
+    Super+WheelScrollUp         cooldown-ms=200 { focus-workspace-up; }
+    Super+Ctrl+WheelScrollDown  cooldown-ms=200 { move-column-to-workspace-down; }
+    Super+Ctrl+WheelScrollUp    cooldown-ms=200 { move-column-to-workspace-up; }
 
-    Super+WheelScrollRight      { focus-column-right; }
-    Super+WheelScrollLeft       { focus-column-left; }
-    Super+Ctrl+WheelScrollRight { move-column-right; }
-    Super+Ctrl+WheelScrollLeft  { move-column-left; }
-
-    // Usually scrolling up and down with Shift in applications results in
-    // horizontal scrolling; these binds replicate that.
-    Super+Shift+WheelScrollDown      { focus-column-right; }
-    Super+Shift+WheelScrollUp        { focus-column-left; }
-    Super+Ctrl+Shift+WheelScrollDown { move-column-right; }
-    Super+Ctrl+Shift+WheelScrollUp   { move-column-left; }
-
-    // Similarly, you can bind touchpad scroll "ticks".
-    // Touchpad scrolling is continuous, so for these binds it is split into
-    // discrete intervals.
-    // These binds are also affected by touchpad's natural-scroll, so these
-    // example binds are "inverted", since we have natural-scroll enabled for
-    // touchpads by default.
-    // Super+TouchpadScrollDown { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02+"; }
-    // Super+TouchpadScrollUp   { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02-"; }
-
-    // You can refer to workspaces by index. However, keep in mind that
-    // niri is a dynamic workspace system, so these commands are kind of
-    // "best effort". Trying to refer to a workspace index bigger than
-    // the current workspace count will instead refer to the bottommost
-    // (empty) workspace.
-    //
-    // For example, with 2 workspaces + 1 empty, indices 3, 4, 5 and so on
-    // will all refer to the 3rd workspace.
-    Super+1 { focus-workspace 1; }
-    Super+2 { focus-workspace 2; }
-    Super+3 { focus-workspace 3; }
-    Super+4 { focus-workspace 4; }
-    Super+5 { focus-workspace 5; }
-    // Super+6 { focus-workspace 6; }
-    // Super+7 { focus-workspace 7; }
-    // Super+8 { focus-workspace 8; }
-    // Super+9 { focus-workspace 9; }
-    Super+Ctrl+1 { move-column-to-workspace 1; }
-    Super+Ctrl+2 { move-column-to-workspace 2; }
-    Super+Ctrl+3 { move-column-to-workspace 3; }
-    Super+Ctrl+4 { move-column-to-workspace 4; }
-    Super+Ctrl+5 { move-column-to-workspace 5; }
-    // Super+Ctrl+6 { move-column-to-workspace 6; }
-    // Super+Ctrl+7 { move-column-to-workspace 7; }
-    // Super+Ctrl+8 { move-column-to-workspace 8; }
-    // Super+Ctrl+9 { move-column-to-workspace 9; }
-
-    // Alternatively, there are commands to move just a single window:
-    // Super+Ctrl+1 { move-window-to-workspace 1; }
-
-    // Switches focus between the current and the previous workspace.
-    // Super+Tab { focus-workspace-previous; }
+    Super+Shift+WheelScrollDown         cooldown-ms=200 { focus-column-right; }
+    Super+Shift+WheelScrollUp           cooldown-ms=200 { focus-column-left; }
+    Super+Ctrl+Shift+WheelScrollDown    cooldown-ms=200 { move-column-right; }
+    Super+Ctrl+Shift+WheelScrollUp      cooldown-ms=200 { move-column-left; }
 
     Super+Comma  { consume-or-expel-window-left; }
     Super+Period { consume-or-expel-window-right; }
@@ -351,22 +297,15 @@ binds {
     Super+Shift+F { fullscreen-window; }
     Super+C { center-column; }
 
-    // Finer width adjustments.
-    // This command can also:
-    // * set width in pixels: "1000"
-    // * adjust width in pixels: "-5" or "+5"
-    // * set width as a percentage of screen width: "25%"
-    // * adjust width as a percentage of screen width: "-10%" or "+10%"
-    // Pixel sizes use logical, or scaled, pixels. I.e. on an output with scale 2.0,
-    // set-column-width "100" will make the column occupy 200 physical screen pixels.
-    Super+Minus { set-column-width "-10%"; }
-    Super+Equal { set-column-width "+10%"; }
-
-    // Finer height adjustments when in column with other windows.
-    Super+Shift+Minus { set-window-height "-10%"; }
-    Super+Shift+Equal { set-window-height "+10%"; }
+    // >> You're 'holding' the right and bottom borders 
+    // >> tbh just adjust w/ mouse
+    Super+J { set-column-width "-10%"; }
+    Super+L { set-column-width "+10%"; }
+    Super+I { set-window-height "-10%"; }
+    Super+K { set-window-height "+10%"; }
 
     Print { screenshot; }
+    Super+Shift+S { screenshot; } // >> Windows Shortcut
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
