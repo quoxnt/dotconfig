@@ -72,3 +72,5 @@ Base:
 ### Misc / Tools / Utilities
 
 [CopyQ](https://github.com/hluk/CopyQ)
+
+[nwg-look](https://github.com/nwg-piotr/nwg-look)
