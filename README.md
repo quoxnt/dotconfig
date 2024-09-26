@@ -53,6 +53,8 @@ Base:
 
 [Oh My Posh](https://github.com/JanDeDobbeleer/oh-my-posh) ; terminal prompt customization 
 
+[tty-clock](https://github.com/xorg62/tty-clock) ; Terminal date and time 
+
 <br>
 
 ### Browsers 
@@ -74,3 +76,5 @@ Base:
 [CopyQ](https://github.com/hluk/CopyQ)
 
 [nwg-look](https://github.com/nwg-piotr/nwg-look)
+
+[Qalculate](https://github.com/Qalculate/qalculate-gtk)
