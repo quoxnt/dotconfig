@@ -21,6 +21,18 @@ Base:
 
 ## Desktop Environment / Window Manager
 
+#### DE
+
+[Fedora Workstation](https://fedoraproject.org/workstation/) ; GNOME DE
+
+- [GNOME Extensions Manager](https://github.com/mjakeman/extension-manager)
+- [GNOME Tweaks Tool](https://gitlab.gnome.org/GNOME/gnome-tweaks)
+- [PaperWM](https://github.com/paperwm/PaperWM)
+- [Open Bar](https://github.com/neuromorph/openbar)
+- [Just Perfection](https://gitlab.gnome.org/jrahmatzadeh/just-perfection)
+
+#### WM
+
 [Niri](https://github.com/YaLTeR/niri) ; A scrollable-tiling Wayland compositor.
 
 [Waybar](https://github.com/Alexays/Waybar) ; Bar / Panel for Wayland
@@ -73,8 +85,10 @@ Base:
 
 ### Misc / Tools / Utilities
 
-[CopyQ](https://github.com/hluk/CopyQ)
+[Dolphin](https://github.com/KDE/dolphin) ; file manager
 
-[nwg-look](https://github.com/nwg-piotr/nwg-look)
+[CopyQ](https://github.com/hluk/CopyQ) ; clipboard manager
 
-[Qalculate](https://github.com/Qalculate/qalculate-gtk)
+[nwg-look](https://github.com/nwg-piotr/nwg-look) ; theme manager
+
+[Qalculate](https://github.com/Qalculate/qalculate-gtk) ; caculator
