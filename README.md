@@ -93,6 +93,4 @@ Base:
 
 [CopyQ](https://github.com/hluk/CopyQ) ; clipboard manager
 
-[nwg-look](https://github.com/nwg-piotr/nwg-look) ; theme manager
-
 [Qalculate](https://github.com/Qalculate/qalculate-gtk) ; caculator
