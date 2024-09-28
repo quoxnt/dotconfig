@@ -12,7 +12,7 @@ Singularity Configuration
 # Setup:
 
 Base: 
-[Fedora Sway](https://fedoraproject.org/spins/sway/) or [Fedora Budgie Spin](https://fedoraproject.org/spins/budgie/)
+[Fedora Sway](https://fedoraproject.org/spins/sway/) or [Fedora Budgie Spin](https://fedoraproject.org/spins/budgie/) >> [Fedora LXQt](https://fedoraproject.org/spins/lxqt/)
 
 [SDDM](https://github.com/sddm/sddm/) ; standalone display manager 
 + w/ theme ; [KDE Store](https://store.kde.org/s/KDE%20Store/p/1283380) ; [Gitlab](https://gitlab.com/pwyde/monochrome-kde)
@@ -20,6 +20,8 @@ Base:
 <br><br>
 
 ## Desktop Environment / Window Manager
+
+// To be removed until ...
 
 #### DE
 
@@ -32,6 +34,8 @@ Base:
 - [Just Perfection](https://gitlab.gnome.org/jrahmatzadeh/just-perfection)
 
 #### WM
+
+// ...
 
 [Niri](https://github.com/YaLTeR/niri) ; A scrollable-tiling Wayland compositor.
 
