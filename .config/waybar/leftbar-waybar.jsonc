@@ -1,5 +1,16 @@
 // -*- mode: jsonc -*-
 {
+    "name": "leftbar",
+    "layer": "top",
+    "position": "left",
+    //"height": ,
+    "width": 28,
+    "modules-left": [ "clock" ],
+    "modules-center": [
+        "niri/workspaces"
+    ],
+    "modules-right": [ "cpu" ]
+
     "name": "topbar",
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
@@ -24,14 +35,15 @@
     ],
     // Modules configuration
     "niri/workspaces": {
-        "all-outputs": false,
+        "all-outputs": true,
         "warp-on-scroll": false,
         "disable-tooltip": true,
         "disable-markup": true,
         "format": "{}",
         "format-icons": {
-            "active": "◆", //or focused
-            "default": "◇"
+            "1": "⟐",
+            "active": "∇", //or focused
+            "default": "⊕"
         }
     },
     "keyboard-state": {
@@ -85,11 +97,11 @@
         // "timezone": "America/New_York",
         // "format": "{:%H:%M:%S}",
         "format": "{:%Y - %b - %d || %T}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         // "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}% "
+        "format": "{usage}% ",
         // "tooltip": false
     },
     "memory": {
@@ -143,7 +155,7 @@
         "format-ethernet": "{ifname} ",
         // "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠"
+        "format-disconnected": "Disconnected ⚠",
         // "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
