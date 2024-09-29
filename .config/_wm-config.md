@@ -2,21 +2,17 @@
 
 ### Global Shortcuts
 
-Default Browser
-
-&emsp;Super + B
-
 Default File Manager
 
-&emsp;Super + F
+&emsp;Super + 1
 
 Default Text Editor
 
-&emsp;Super + T
+&emsp;Super + 2
 
 Default Terminal
 
-&emsp;Super + Enter
+&emsp;Super + T
 
 </br>
 
