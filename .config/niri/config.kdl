@@ -259,13 +259,9 @@ binds {
     Super+Ctrl+BracketRight { move-column-to-last; }
 
     Super+Shift+Left  { focus-monitor-left; }
-    Super+Shift+Down  { focus-monitor-down; }
-    Super+Shift+Up    { focus-monitor-up; }
     Super+Shift+Right { focus-monitor-right; }
 
     Super+Shift+Ctrl+Left  { move-window-to-monitor-left; }
-    Super+Shift+Ctrl+Down  { move-window-to-monitor-down; }
-    Super+Shift+Ctrl+Up    { move-window-to-monitor-up; }
     Super+Shift+Ctrl+Right { move-window-to-monitor-right; }
 
     // >> Using Up|Down controls with workspaces in this context is more intuitive than using Super+[number], thus just use Super+Page_Up|Down to navigate 
