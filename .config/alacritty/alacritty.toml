@@ -2,7 +2,10 @@
 
 [window]
 padding = { x = 16, y = 16}
-opacity = 0.9
+opacity = 0.95
+
+[cursor]
+style = { "shape"="Block", "blinking"="Always" }
 
 
 ## Catppuccin Mocha ||
