@@ -9,6 +9,7 @@
     "kernel",
     "uptime",
     "packages",
+    "wm",
     "shell",
     "break",
     "memory"
