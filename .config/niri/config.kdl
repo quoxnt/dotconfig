@@ -1,23 +1,18 @@
 // >> Quartzxv Niri Config 
-
-// This config is in the KDL format: https://kdl.dev
-// "/-" comments out the following node.
-// Check the wiki for a full description of the configuration:
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Overview
-
-
-// Input device configuration. // https://github.com/YaLTeR/niri/wiki/Configuration:-Input
+// https://github.com/YaLTeR/niri/wiki
 
 input {
     keyboard {
         xkb {
-            // You can set rules, model, layout, variant and options.
-            // For more information, see xkeyboard-config(7).
-
-            // For example:
-            // layout "us,ru"
-            // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
+            // layout "us"
+            // variant "colemak_dh_ortho"
+            // options "compose:ralt,ctrl:nocaps"
+            // model ""
+            // rules ""
         }
+        // repeat-delay 600
+        // repeat-rate 25
+        // track-layout "global"
     }
 
     // Next sections include libinput settings.
@@ -28,38 +23,52 @@ input {
         // dwt
         // dwtp
         natural-scroll
-        // accel-speed 0.2
+        accel-speed 0.2
         // accel-profile "flat"
         // scroll-method "two-finger"
+        // tap-button-map "left-middle-right"
+        // click-method "clickfinger"
+        // left-handed
         // disabled-on-external-mouse
+        // middle-emulation
     }
 
     mouse {
         // off
         // natural-scroll
-        // accel-speed 0.2
-        // accel-profile "flat"
+        accel-speed 0.5
+        accel-profile "flat"
         // scroll-method "no-scroll"
+        // left-handed
+        // middle-emulation
     }
 
-    // Uncomment this to make the mouse warp to the center of newly focused windows.
-    // warp-mouse-to-focus
+    /-trackpoint {
+        // off
+        // natural-scroll
+        // accel-speed 0.2
+        // accel-profile "flat"
+        // scroll-method "on-button-down"
+        // middle-emulation
+    }
 
-    // Focus windows and outputs automatically when moving the mouse into them.
-    // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
-    // focus-follows-mouse max-scroll-amount="0%"
+    /-tablet {
+        // off
+        // map-to-output "eDP-1"
+        // left-handed
+    }
+
+    /-touch {
+        // map-to-output "eDP-1"
+    }
+
+    // disable-power-key-handling
+    // warp-mouse-to-focus
+    focus-follows-mouse max-scroll-amount="0%"
+    // workspace-auto-back-and-forth
 }
 
-
-
-// You can configure outputs by their name, which you can find by running `niri msg outputs` while inside a niri instance.
-// The built-in laptop monitor is usually called "eDP-1".
-// Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-// Find more information on the wiki: https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
-// Remember to uncomment the node by removing "/-"!
-
-// >> External Monitor Left + Laptop Right Setup
-// >> (Un)Comment accordingly
+// >> External Monitor Left + Laptop Right Setup // >> (Un)Comment accordingly
 
 output "eDP-1" {
     
@@ -76,7 +85,8 @@ output "eDP-1" {
 
 output "HDMI-A-1"{
 
-    mode "1920x1080@100.000"
+    // mode "1920x1080@74.973"
+    mode "1920x1080@100.087"
 
     position x=0 y=0
 }
@@ -86,118 +96,66 @@ output "HDMI-A-1"{
 
 layout {
 
-    gaps 12
+    gaps 8 // 
 
-    center-focused-column "on-overflow"
+    center-focused-column "on-overflow" // <>
 
     // You can customize the widths that "switch-preset-column-width" (Super+R) toggles between.
     preset-column-widths {
-        
-        // \\ proportion [fraction of screen] 
 
         proportion 0.25
         proportion 0.33333
         proportion 0.5
         proportion 0.66667
-
-        // >> Defaults are good 
-
-        // \\ fixed [logical pixel count]
+        proportion 0.75
     }
 
-    // You can change the default width of the new windows.
-    default-column-width { proportion 0.5; }
-    // If you leave the brackets empty, the windows themselves will decide their initial width.
-    // default-column-width {}
-
-    // By default focus ring and border are rendered as a solid background rectangle
-    // behind windows. That is, they will show up through semitransparent windows.
-    // This is because windows using client-side decorations can have an arbitrary shape.
-    //
-    // If you don't like that, you should uncomment `prefer-no-csd` below.
-    // Niri will draw focus ring and border *around* windows that agree to omit their
-    // client-side decorations.
-    //
-    // Alternatively, you can override it with a window rule called
-    // `draw-border-with-background`.
-
-    // You can change how the focus ring looks.
+    // You can change the default width of the new windows. // If you leave the brackets empty, the windows themselves will decide their initial width.
+    default-column-width { proportion 0.8; }
 
     // >> Prefer focus rings only, no borders
-
     focus-ring {
 
         width 4
         
         active-color "#00c4a8"
-        // active-gradient from="#00ecc4" to="#720072" angle=135
-        
-        inactive-color "#606060"
-        // inactive-gradient from="#505050" to="#808080" angle=45 // relative-to="workspace-view"        
+        inactive-color "#606060"      
     }
 
     struts {
-        left 16
-        right 16
+        // >> only right strut due to waybar left bar setup
+        // left 8 
+        right 32
         // top 8
-        // bottom 64
+        // bottom 8
     }
 }
 
-// Add lines like this to spawn processes at startup.
-// Note that running niri as a session supports xdg-desktop-autostart,
-// which may be more convenient to use.
-// See the binds section below for more spawn examples.
-// spawn-at-startup "alacritty" "-e" "fish"
-
-// spawn-at-startup "swaybg" "-i" "~h/.config/background"
-// spawn-at-startup "waybar"
-
-// Uncomment this line to ask the clients to omit their client-side decorations if possible.
-// If the client will specifically ask for CSD, the request will be honored.
-// Additionally, clients will be informed that they are tiled, removing some rounded corners.
+// >> Something like the window round corners
 prefer-no-csd
 
-// You can change the path where screenshots are saved.
-// A ~ at the front will be expanded to the home directory.
-// The path is formatted with strftime(3) to give you the screenshot date and time.
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
-// Animation settings.
-// The wiki explains how to configure individual animations:
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Animations
 animations {
-    // Uncomment to turn off all animations.
-    // off
-
-    // Slow down all animations by this factor. Values below 1 speed them up instead.
-    // slowdown 3.0
+    
+    slowdown 0.8  // Slow down all animations by this factor. Values below 1 speed them up instead.
 }
 
-// Window rules let you adjust behavior for individual windows.
-// Find more information on the wiki:
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
+// >> window rules
 
-// Work around WezTerm's initial configure bug
-// by setting an empty default-column-width.
 window-rule {
-    // This regular expression is intentionally made as specific as possible,
-    // since this is the default config, and we want no false positives.
-    // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
+    clip-to-geometry true
 }
 
-// Example: block out two password managers from screen capture.
-// (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+window-rule {
+    match app-id="org.pulseaudio.pavucontrol"
+    default-column-width { proportion 0.35; }
+}
 
-    block-out-from "screen-capture"
-
-    // Use this instead if you want them visible on third-party screenshot tools.
-    // block-out-from "screencast"
+window-rule {
+    match app-id="Nautilus"
+    match app-id="Alacritty"
+    default-column-width { proportion 0.5; }
 }
 
 binds {
@@ -223,6 +181,9 @@ binds {
     Super+5 { spawn "firefox"; }
     Super+6 { spawn "flatpak" "run" "one.ablaze.floorp"; }
 
+    // Restart Waybar and Mako after editing respective config files
+    Alt+Shift+R { spawn "systemctl" "--user" "restart" "waybar.service" "mako.service"; }
+
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
     // Mod+T { spawn "bash" "-c" "notify-send hello && exec alacritty"; }
@@ -237,16 +198,17 @@ binds {
     Alt+XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SOURCE@" "0.05-"; }
 
     // Setup for brightness up
-    // XF86MonBrightnessUp { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01+"; }
+    // XF86BrightnessUp { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01+"; }
     // Setup for brightness down
-    // XF86MonBrightnessDown { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01-"; }
+    // XF86KbdBrightnessDown { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01-"; }
 
     Super+Q { close-window; }
 
     Super+Left    { focus-column-left; }
     Super+Down    { focus-window-down; }
     Super+Up      { focus-window-up; }
-    Super+Right   { focus-column-right; }
+    // Super+Right   { spawn "scrpts/niri-mako-osd/niri-wc.sh"; } // { focus-column-right; }
+    Super+Right { focus-column-right; }
 
     Super+Ctrl+Left  { move-column-left; }
     Super+Ctrl+Down  { move-window-down; }
@@ -274,15 +236,15 @@ binds {
     Super+Shift+Page_Down { move-workspace-down; }
     Super+Shift+Page_Up   { move-workspace-up; }
 
-    Super+WheelScrollDown       cooldown-ms=200 { focus-workspace-down; }
-    Super+WheelScrollUp         cooldown-ms=200 { focus-workspace-up; }
-    Super+Ctrl+WheelScrollDown  cooldown-ms=200 { move-column-to-workspace-down; }
-    Super+Ctrl+WheelScrollUp    cooldown-ms=200 { move-column-to-workspace-up; }
+    Super+Shift+WheelScrollDown       cooldown-ms=200 { focus-workspace-down; }
+    Super+Shift+WheelScrollUp         cooldown-ms=200 { focus-workspace-up; }
+    Super+Shift+Ctrl+WheelScrollDown  cooldown-ms=200 { move-column-to-workspace-down; }
+    Super+Shift+Ctrl+WheelScrollUp    cooldown-ms=200 { move-column-to-workspace-up; }
 
-    Super+Shift+WheelScrollDown         cooldown-ms=200 { focus-column-right; }
-    Super+Shift+WheelScrollUp           cooldown-ms=200 { focus-column-left; }
-    Super+Ctrl+Shift+WheelScrollDown    cooldown-ms=200 { move-column-right; }
-    Super+Ctrl+Shift+WheelScrollUp      cooldown-ms=200 { move-column-left; }
+    Super+WheelScrollDown         cooldown-ms=200 { focus-column-right; }
+    Super+WheelScrollUp           cooldown-ms=200 { focus-column-left; }
+    Super+Ctrl+WheelScrollDown    cooldown-ms=200 { move-column-right; }
+    Super+Ctrl+WheelScrollUp      cooldown-ms=200 { move-column-left; }
 
     Super+Comma  { consume-or-expel-window-left; }
     Super+Period { consume-or-expel-window-right; }
@@ -295,19 +257,16 @@ binds {
 
     // >> You're 'holding' the right and bottom borders 
     // >> tbh just adjust w/ mouse
-    Super+J { set-column-width "-10%"; }
-    Super+L { set-column-width "+10%"; }
-    Super+I { set-window-height "-10%"; }
-    Super+K { set-window-height "+10%"; }
+    Super+J { set-column-width "-5%"; }
+    Super+L { set-column-width "+5%"; }
+    Super+I { set-window-height "-5%"; }
+    Super+K { set-window-height "+5%"; }
 
-    Print { screenshot; }
+    Print { screenshot; } // Use normal screenshot for screenshot-screen;
     Super+Shift+S { screenshot; } // >> Windows Shortcut
-    Ctrl+Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
+    Alt+Print { screenshot-window; } // Captures window in focus
 
-    // The quit action will show a confirmation dialog to avoid accidental exits.
-    Super+Shift+E { quit; }
+    Super+Shift+E { quit; } // The quit action will show a confirmation dialog to avoid accidental exits.
 
-    // Powers off the monitors. To turn them back on, do any input like moving the mouse or pressing any other key.
-    Super+Shift+P { power-off-monitors; }
+    Super+Shift+P { power-off-monitors; } // Powers off the monitors. To turn them back on, do any input like moving the mouse or pressing any other key.
 }
