@@ -1,0 +1,18 @@
+## https://github.com/emersion/mako/wiki
+
+## color
+border-color=#7878ee
+text-color=#ddddff
+background-color=#202020cc
+
+## geometry
+margin=0,32,32,0
+outer-margin=0,0,32,0
+#margin=32
+padding=8
+width=320
+text-alignment=right
+anchor=bottom-right
+
+## settings
+default-timeout=120000
