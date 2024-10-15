@@ -7,12 +7,14 @@ Singularity Configuration
 
 [Font](https://github.com/0xType/0xProto) ; 0xProto Nerd Fonts 
 
+App Theme ; [Gtk](https://github.com/vinceliuice/Lavanda-gtk-theme) && [Qt](https://github.com/vinceliuice/Lavanda-kde) ; Lavanda Sea Dark
+
 <br><br> 
 
 # Setup:
 
 Base: 
-[Fedora Sway](https://fedoraproject.org/spins/sway/) or [Fedora Budgie Spin](https://fedoraproject.org/spins/budgie/) >> [Fedora LXQt](https://fedoraproject.org/spins/lxqt/)
+[Fedora Sway](https://fedoraproject.org/spins/sway/) or [Fedora Budgie Spin](https://fedoraproject.org/spins/budgie/) >> [Fedora LXQt](https://fedoraproject.org/spins/lxqt/) or [Fedora NetInstall](https://alt.fedoraproject.org/)
 
 [SDDM](https://github.com/sddm/sddm/) ; standalone display manager 
 + w/ theme ; [KDE Store](https://store.kde.org/s/KDE%20Store/p/1283380) ; [Gitlab](https://gitlab.com/pwyde/monochrome-kde)
