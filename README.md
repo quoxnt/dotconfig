@@ -43,6 +43,10 @@ Base:
 
 [Waybar](https://github.com/Alexays/Waybar) ; Bar / Panel for Wayland
 
+[Fuzzel](https://codeberg.org/dnkl/fuzzel) >> [Wofi](https://sr.ht/~scoopta/wofi/) ; App launcher ; can be customized to do/be other things
+
+[Mako](https://github.com/emersion/mako) ; Notification service ; searching for alternatives
+
 <br><br>
 
 ## Applications 
