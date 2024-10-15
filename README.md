@@ -96,3 +96,5 @@ Base:
 [CopyQ](https://github.com/hluk/CopyQ) ; clipboard manager
 
 [Qalculate](https://github.com/Qalculate/qalculate-gtk) ; caculator
+
+[PavuControl](https://gitlab.freedesktop.org/pulseaudio/pavucontrol) ; Volume Control
