@@ -75,7 +75,9 @@ Base:
 
 [Oh My Posh](https://github.com/JanDeDobbeleer/oh-my-posh) ; terminal prompt customization 
 
-[tty-clock](https://github.com/xorg62/tty-clock) ; Terminal date and time 
+// [tty-clock](https://github.com/xorg62/tty-clock) ; Terminal date and time ; to be removed
+
+[imv](https://sr.ht/~exec64/imv/) ; Terminal image viewer
 
 <br>
 
