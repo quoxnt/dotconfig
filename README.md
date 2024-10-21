@@ -1,6 +1,8 @@
 # singularity
 Singularity Configuration
 
+rename folder to sys_<folder_name> && Add in /usr/share/*
+
 [Cursor](https://github.com/ful1e5/Bibata_Cursor) ; Bibata cursor theme 
 
 [Icons](https://github.com/vinceliuice/Tela-circle-icon-theme) ; Tela Circle Icon Theme 
