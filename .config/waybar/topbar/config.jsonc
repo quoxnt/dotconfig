@@ -1,0 +1,139 @@
+// -*- mode: jsonc -*-
+// https://github.com/Alexays/Waybar/wiki
+[
+    {
+        "name": "topbar",
+        "layer": "top",
+        "position": "top",
+        "height": 24,
+        "spacing": 16,
+        "modules-left": [
+             "niri/workspaces", "niri/window"
+        ],
+        "fixed-center": true,
+        "modules-center": [
+            "clock"
+        ],
+        "modules-right": [
+            "pulseaudio",
+            "network",
+            "temperature",
+            "memory",
+            "power-profiles-daemon",
+            "battery"
+        ],
+
+        "niri/workspaces": {
+            "warp-on-scroll": true,
+            "tooltip": false,
+            "disable-markup": false,
+            "format": "{}",
+            "format-icons": {
+                "active": "◆", // focused is styled via sa .CSS file
+                "default": "◇"
+            }
+        },
+
+        "niri/window": {
+            "tooltip-format": "Left Click / Scroll Up : Left Column\nRightt Click / Scroll Down : Right Column",
+            "on-click": "niri msg action focus-column-left",
+            "on-scroll-up": "niri msg action focus-column-left",
+            "on-click-right": "niri msg action focus-column-right",
+            "on-scroll-down": "niri msg action focus-column-right",
+            "format": "  <span color='#7878ee'><b>⤄</b></span>    {title}"
+        },
+
+        // https://github.com/Alexays/Waybar/wiki/Module:-Clock
+        "clock": {
+            "interval": 1,
+            "format": "{:%Y %b %d %H %M %S}",
+            "tooltip": true,
+            "tooltip-format": "<tt><small>{calendar}</small></tt>",
+            "calendar": {
+                "mode": "month",
+                "format": {
+                    "today":      "<span color='#7878ee'><b><u>{}</u></b></span>"
+                }
+            } 
+        },
+
+        // https://github.com/Alexays/Waybar/wiki/Module:-PulseAudio
+        "pulseaudio": {
+            "format": "{volume}% {icon} {format_source}",
+            "format-bluetooth": "{volume}% {icon} {format_source}",
+            "format-bluetooth-muted": " {icon} {format_source}",
+            "format-muted": " {format_source}",
+            "format-source": "{volume}% ",
+            "format-source-muted": "",
+            "format-icons": {
+                "headphone": "",
+                "hands-free": "",
+                "headset": "",
+                "phone": "",
+                "portable": "",
+                "default": ["", "", ""]
+            },
+            "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+            "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+        },
+
+        // https://github.com/Alexays/Waybar/wiki/Module:-Network
+        "network": {
+            // "interface": "wlp2*", // (Optional) To force the use of this interface
+            "format-wifi": "",
+            "tooltip-format-wifi": "SSID: {essid} {signalStrength}%",
+            "format-ethernet": "",
+            "tooltip-format-ethernet": "Ethernet Connected\nInterface Name: {ifname}",
+            "format-disconnected": "⚠",
+            "tooltip-force-disable": "Disconnected"
+        },
+
+        // https://github.com/Alexays/Waybar/wiki/Module:-Memory
+        "memory": {
+            "format": "{percentage}% ",
+            "tooltip-format": "{used}\/{total} GiB used"
+        },
+
+        // https://github.com/Alexays/Waybar/wiki/Module:-Temperature
+        "temperature": {
+            "tooltip": false,
+            // "thermal-zone": 2,
+            // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+            "critical-threshold": 80,
+            // "format-critical": "{temperatureC}°C {icon}",
+            "format": "{temperatureC}°C {icon}",
+            "format-icons": ["", "", ""]
+        },
+
+        // https://github.com/Alexays/Waybar/wiki/Module:-PowerProfilesDaemon
+        "power-profiles-daemon": {
+            "format": "{icon}",
+            "tooltip-format": "Power profile: {profile}",
+            "tooltip": true,
+            "format-icons": {
+                "default": "",
+                "performance": "",
+                "balanced": "",
+                "power-saver": ""
+            }
+        },
+
+        // https://github.com/Alexays/Waybar/wiki/Module:-Battery
+        "battery": {
+            "states": {
+                // "good": 95,
+                "warning": 30,
+                "critical": 15
+            },
+            "format": "{capacity}%", //{icon}
+            "format-full": "{capacity}%", //{icon}
+            "format-charging": "{capacity}%", //
+            "format-plugged": "{capacity}%", //
+            "format-discharging": "{capacity}%", //{icon}
+            // "format-good": "", // An empty format will hide the module
+            // "format-full": "",
+            // "format-icons": ["", "", "", "", ""],
+            "tooltip-format": "{timeTo}\nPower Draw: {power}W"
+        }
+    }
+]
