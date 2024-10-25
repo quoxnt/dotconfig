@@ -70,6 +70,7 @@ window#waybar.empty #window {
 } 
 
 #network,
+#cpu,
 #temperature,
 #memory,
 #power-profiles-daemon{
