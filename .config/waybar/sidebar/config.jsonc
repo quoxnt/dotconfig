@@ -37,6 +37,7 @@
         },
 
         "niri/window": {
+            "separate-outputs":true,
             "tooltip-format": "Left Click / Scroll Up : Left Column\nRightt Click / Scroll Down : Right Column",
             "on-click": "niri msg action focus-column-left",
             "on-scroll-up": "niri msg action focus-column-left",

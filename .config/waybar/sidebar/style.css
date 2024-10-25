@@ -27,6 +27,7 @@ window#waybar {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     margin-left: 4px;
+    /* margin-right: 4px; */
 } 
 
 .modules-center{
@@ -35,6 +36,7 @@ window#waybar {
     min-width: 8px;
     border-radius: 8px;
     margin-left: 4px;
+    /* margin-right: 4px; */
 } 
 
 .modules-right {
@@ -44,6 +46,7 @@ window#waybar {
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
     margin-left: 4px;
+    /* margin-right: 4px; */
 }
 
 /* ---------- Modules Specific CSS---------- */
@@ -59,26 +62,25 @@ window#waybar {
 #window
 {
     font-size: 12px;
-    margin: 0px 4px;
+    margin: 0px 0px;
     padding: 0px 8px;
-    /* border-left: solid 2px #00c4a8;
-    border-right: solid 2px #00c4a8; */
+    border-left: solid 4px #00c4a8;
+    border-right: solid 4px #00c4a8;
 }
 window#waybar.empty #window {
-    border-left: solid 1px transparent;
-    border-right: solid 1px transparent;
+    border-left: solid 2px transparent;
+    border-right: solid 2px transparent;
 }
 
-#pulseaudio.source-muted {
+#pulseaudio {
     font-size: 10px;
     margin: 8px 0px;
-    padding: 2px 0px;
+    padding: 4px 0px;
+}
+#pulseaudio.source-muted {
     border-bottom: solid 2px #ee7848;
 } 
 #pulseaudio.sink-muted {
-    font-size: 10px;
-    margin: 8px 0px;
-    padding: 2px 0px;
     border-top: solid 2px #ee7878;
 } 
 
@@ -122,7 +124,7 @@ window#waybar.empty #window {
 }
 
 #temperature.critical {
-    border-bottom: solid 1px #ee4848;
+    border-bottom: solid 4px #ee4848;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -131,38 +133,33 @@ window#waybar.empty #window {
 }
 
 #power-profiles-daemon.performance {
-    border-top: solid 4px #ee7878;
+    border-bottom: solid 4px #ee7878;
 }
 #power-profiles-daemon.balanced {
     border-bottom: solid 4px #7878ee;
 }
 #power-profiles-daemon.power-saver {
-    border-top: solid 4px #78ee78;
+    border-bottom: solid 4px #78ee78;
 }
 
-#battery.charging, #battery.plugged {
+#battery {
     font-size: 12px;
     margin: 8px 0px;
     padding: 2px 0px;
+}
+#battery.charging, 
+#battery.plugged,
+#battery.full {
     border-bottom: solid 4px #78ee78;
 }
 #battery.discharging {
-    font-size: 12px;
-    margin: 8px 0px;
-    padding: 2px 0px;
     border-bottom: solid 4px #eeee78;
 }
 #battery.warning:not(.charging) {
-    font-size: 12px;
-    margin: 8px 0px;
-    padding: 2px 0px;
     border-bottom: solid 4px #ee7848;
 }
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    font-size: 12px;
-    margin: 8px 0px;
-    padding: 2px 0px;
     border-bottom: solid 4px #ee4848;
     animation-name: blink;
     animation-duration: 0.5s;
