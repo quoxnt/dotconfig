@@ -9,8 +9,8 @@
 }
 
 tooltip {
-    background-color: rgba(15, 15, 15, 0.8);
-    border: inset 1px rgba(240, 240, 240, 0.6);
+    background-color: rgba(15, 15, 15, 0.87);
+    border: inset 1px rgba(240, 240, 240, 0.87);
 }
 
 window#waybar {
@@ -20,7 +20,7 @@ window#waybar {
 /* ---------- Module Groups Config ---------- */
 
 .modules-left{
-    background-color: rgba(15, 15, 15, 0.8);
+    background-color: rgba(15, 15, 15, 0.87);
     min-height: 0px;
     min-width: 0px;
     padding-bottom: 8px;
@@ -31,18 +31,19 @@ window#waybar {
 } 
 
 .modules-center{
-    background-color: rgba(15, 15, 15, 0.8);
+    background-color: rgba(15, 15, 15, 0.87);
     min-height: 0px;
-    min-width: 8px;
+    min-width: 0px;
     border-radius: 8px;
     margin-left: 4px;
     /* margin-right: 4px; */
 } 
 
 .modules-right {
-    background-color: rgba(15, 15, 15, 0.8);
+    background-color: rgba(15, 15, 15, 0.87);
     min-height: 0px;
     min-width: 0px;
+    padding-top: 8px;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
     margin-left: 4px;
@@ -54,7 +55,7 @@ window#waybar {
 #clock {
     color: #ffffff;
     font-size: 12px;
-    margin: 0px;
+    margin-bottom: 4px;
     padding: 8px 0px;
     border-bottom: 4px solid #00c4a8;
 }
@@ -62,7 +63,7 @@ window#waybar {
 #window
 {
     font-size: 12px;
-    margin: 0px 0px;
+    margin: 4px 0px;
     padding: 0px 8px;
     border-left: solid 4px #00c4a8;
     border-right: solid 4px #00c4a8;
@@ -72,32 +73,18 @@ window#waybar.empty #window {
     border-right: solid 2px transparent;
 }
 
-#pulseaudio {
-    font-size: 10px;
-    margin: 8px 0px;
-    padding: 4px 0px;
-}
-#pulseaudio.source-muted {
-    border-bottom: solid 2px #ee7848;
-} 
-#pulseaudio.sink-muted {
-    border-top: solid 2px #ee7878;
-} 
-
 #workspaces {
     min-height: 8px;
 }
-
 #workspaces button{
     border-left: 4px solid transparent;
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
     /* border-right: 4px solid transparent; */
     font-size: 20px;
-    margin: 8px 0px;
+    margin: 0px;
     padding: 2px 0px;
 }
-
 #workspaces button.active {
     border-left: 4px solid #a4a4a4;
     /* border-right: 4px solid #a4a4a4; */
@@ -107,29 +94,32 @@ window#waybar.empty #window {
     /* border-right: 4px solid #00c4a8; */
 }
 
+#pulseaudio,
 #network,
-#temperature,
 #memory,
 #power-profiles-daemon{
     font-size: 10px;
-    margin: 8px 0px;
+    margin: 4px 0px;
     padding: 2px 0px;
 }
+
+#pulseaudio {
+    border-bottom: solid 2px transparent;
+    border-top: solid 2px transparent;
+    padding: 4px 0px;
+}
+#pulseaudio.source-muted {
+    border-top: solid 2px #ee7848;
+} 
+#pulseaudio.sink-muted {
+    border-bottom: solid 2px #ee7878;
+} 
 
 #network {
     border-bottom: solid 4px #78ee78;
 }
 #network.disconnected {
     border-bottom: solid 4px #ee7878;
-}
-
-#temperature.critical {
-    border-bottom: solid 4px #ee4848;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
 
 #power-profiles-daemon.performance {
@@ -144,7 +134,7 @@ window#waybar.empty #window {
 
 #battery {
     font-size: 12px;
-    margin: 8px 0px;
+    margin: 4px 0px;
     padding: 2px 0px;
 }
 #battery.charging, 
