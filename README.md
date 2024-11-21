@@ -44,11 +44,14 @@ __Environment__
 
 <br>
 
-Full Wayland  [Niri](https://github.com/YaLTeR/niri) ; A scrollable-tiling Wayland compositor.
+Full Wayland <br>
+-> [Niri](https://github.com/YaLTeR/niri) ; A scrollable-tiling Wayland compositor.
 
-Full X11      [AwesomeWM](https://github.com/awesomeWM/awesome) ; highly configurable, next generation framework window manager for X.
+Full X11 <br>
+-> [AwesomeWM](https://github.com/awesomeWM/awesome) ; highly configurable, next generation framework window manager for X.
 
-Base / Backup [KDE Plasma](https://invent.kde.org/plasma) ;  a desktop environment that adapts to your needs and offers a beautiful and user-friendly interface.  
+Base / Backup <br>
+-> [KDE Plasma](https://invent.kde.org/plasma) ;  a desktop environment that adapts to your needs and offers a beautiful and user-friendly interface.  
 
 <br><br>
 
