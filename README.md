@@ -46,6 +46,7 @@ __Environment__
 
 Full Wayland <br>
 -> [Niri](https://github.com/YaLTeR/niri) ; A scrollable-tiling Wayland compositor.
+---> [XWayland using AwesomeWM](https://github.com/YaLTeR/niri/wiki/Xwayland#directly-running-xwayland-in-rootful-mode)
 
 Full X11 <br>
 -> [AwesomeWM](https://github.com/awesomeWM/awesome) ; highly configurable, next generation framework window manager for X.
