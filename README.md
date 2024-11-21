@@ -40,8 +40,21 @@ Base:
 #### WM
 
 // ...
+__Environment__
 
-[Niri](https://github.com/YaLTeR/niri) ; A scrollable-tiling Wayland compositor.
+<br>
+
+Full Wayland  [Niri](https://github.com/YaLTeR/niri) ; A scrollable-tiling Wayland compositor.
+
+Full X11      [AwesomeWM](https://github.com/awesomeWM/awesome) ; highly configurable, next generation framework window manager for X.
+
+Base / Backup [KDE Plasma](https://invent.kde.org/plasma) ;  a desktop environment that adapts to your needs and offers a beautiful and user-friendly interface.  
+
+<br><br>
+
+__Utilities__
+
+<br>
 
 [Waybar](https://github.com/Alexays/Waybar) ; Bar / Panel for Wayland
 
