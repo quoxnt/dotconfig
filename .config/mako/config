@@ -2,8 +2,8 @@
 
 ## color
 border-color=#7878ee
-text-color=#ddddff
-background-color=#202020cc
+text-color=#ddeeff
+background-color=#303440dd
 
 ## geometry
 margin=0,32,32,0
@@ -13,6 +13,8 @@ padding=8
 width=320
 text-alignment=right
 anchor=bottom-right
+border-size=1
 
 ## settings
 default-timeout=120000
+max-visible=8
