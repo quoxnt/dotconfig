@@ -16,10 +16,7 @@ App Theme ; [Gtk](https://github.com/vinceliuice/Lavanda-gtk-theme) && [Qt](http
 # Setup:
 
 Base: 
-[Fedora Sway](https://fedoraproject.org/spins/sway/) or [Fedora Budgie Spin](https://fedoraproject.org/spins/budgie/) >> [Fedora LXQt](https://fedoraproject.org/spins/lxqt/) or [Fedora NetInstall](https://alt.fedoraproject.org/)
-
-[SDDM](https://github.com/sddm/sddm/) ; standalone display manager 
-+ w/ theme ; [KDE Store](https://store.kde.org/s/KDE%20Store/p/1283380) ; [Gitlab](https://gitlab.com/pwyde/monochrome-kde)
+[Fedora NetInstall](https://alt.fedoraproject.org/) ; and install everything else need/want from the Anaconda Installer 
 
 <br><br>
 
@@ -66,6 +63,8 @@ __Utilities__
 
 [Mako](https://github.com/emersion/mako) ; Notification service ; searching for alternatives
 
+(wlogout)[https://github.com/ArtsyMacaw/wlogout] ; Powermenu
+
 <br><br>
 
 ## Applications 
@@ -82,13 +81,13 @@ __Utilities__
 
 ### Terminal Emulator 
 
-[Alacritty ](https://github.com/alacritty/alacritty) ; a modern terminal emulator that comes with sensible defaults, but allows for extensive configuration. 
+[Alacritty](https://github.com/alacritty/alacritty) ; a modern terminal emulator that comes with sensible defaults, but allows for extensive configuration. 
 
 #### TUI 
 
 [btop](https://github.com/aristocratos/btop) ; Resource monitor that shows usage and stats for processor, memory, disks, network and processes 
 
-[bat](https://github.com/tshakalekholoane/bat) ; Battery Manager 
+[bat](https://github.com/tshakalekholoane/bat) ; Battery Manager ; rename to _bat-man_
 
 [Fastfetch](https://github.com/fastfetch-cli/fastfetch) ; a neofetch-like tool for fetching system information and displaying it prettily. It is written mainly in C, with performance and customizability in mind. 
 
@@ -96,7 +95,9 @@ __Utilities__
 
 // [tty-clock](https://github.com/xorg62/tty-clock) ; Terminal date and time ; to be removed
 
-[imv](https://sr.ht/~exec64/imv/) ; Terminal image viewer
+[qView](https://github.com/jurplel/qView) ; Terminal image viewer
+
+[mpv](https://github.com/mpv-player/mpv) ; Terminal Media (audio & video) player
 
 <br>
 
@@ -108,7 +109,7 @@ __Utilities__
 
 #### Browsers Configs
 
-[Firefox color theme](https://color.firefox.com/?theme=XQAAAAIMAQAAAAAAAABBKYhm849SCia2CaaEGccwS-xMDPrv2Sw6Caq-qy5QgqeHG4K15QeDoRokmgjiM6AAxM3X9F70ZoGsfXBn8NHNS5cg0b24qKCltXn6qWO8ux14bAoY6SH_K-M6qEHMzhL7jP0L7V_lS0cszMX5wC9iXzlCSlfcjc9G3wwoZfOWYCNhPNYUwtvns3_x66Py5QtpdcNT46I-W-vLPMEaobM0ieaLP_oV6eA) ; Custom Firefox color theme
+[Firefox color theme](https://color.firefox.com/?theme=XQAAAALgAQAAAAAAAABBKYhm849SCicxcT-BCXcGHf3p79Ffm1DwtEt68K_2xteNrJOC3jONzlys-AIT8Y69C0MWTh1twDIPXIX1QOiIrw8D8AuyC4HuPHhVr4imz5b2NIjpphV3s5yM6muQsB45MkrZHmqkWGwnARCkRcFK4j5KYD3PTlCYfjtxfQxdWx4seFHiL6Yh7yvh3aZofRgt0A14TitLoRLuy6LJSe8Hdl0O3lgP6Ql4Ygm2jb3qikvbezUUB0MVzHn0YKsM0Z6ZS-uA-jcmhbwdDElFMj_SyXxAEtVNpMWVRWxsZ20NE2jBpNdf__QqGgE) ; Custom Firefox color theme
 
 [Tabliss](https://tabliss.io/) ; Custom Browser Tab
 
