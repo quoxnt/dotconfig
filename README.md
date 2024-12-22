@@ -63,7 +63,7 @@ __Utilities__
 
 [Mako](https://github.com/emersion/mako) ; Notification service ; searching for alternatives
 
-(wlogout)[https://github.com/ArtsyMacaw/wlogout] ; Powermenu
+[wlogout](https://github.com/ArtsyMacaw/wlogout) ; Powermenu
 
 <br><br>
 
