@@ -1,0 +1,49 @@
+* {
+	background-image: none;
+	box-shadow: none;
+}
+
+window {
+	background-color: rgba(48, 52, 64, 0.87);
+}
+
+button {
+	border-radius: 0;
+	border-color: rgba(0, 0, 0, 0);
+	background-color: rgba(221, 238, 255, 0.87);
+	border-style: none;
+	border-width: 0px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 30%;
+	margin: 16px 1360px 16px 0px; 
+}
+
+button:focus, button:active, button:hover {
+	background-color: rgba(224, 120, 120, 0.87);
+	outline-style: none;
+}
+
+#monitors-off {
+	background-image: image(url("/home/quartz/.config/wlogout/assets/monitor-off.svg"));
+}
+
+#lock {
+    background-image: image(url("/home/quartz/.config/wlogout/assets/lock.svg"));
+}
+
+#logout {
+    background-image: image(url("/home/quartz/.config/wlogout/assets/logout.svg"));
+}
+
+#suspend {
+    background-image: image(url("/home/quartz/.config/wlogout/assets/suspend.svg"));
+}
+
+#reboot {
+    background-image: image(url("/home/quartz/.config/wlogout/assets/reboot.svg"));
+}
+
+#shutdown {
+    background-image: image(url("/home/quartz/.config/wlogout/assets/shutdown.svg"));
+}
