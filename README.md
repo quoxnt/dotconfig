@@ -77,13 +77,11 @@ __Utilities__
 
 [Fastfetch](https://github.com/fastfetch-cli/fastfetch) ; a neofetch-like tool for fetching system information and displaying it prettily. It is written mainly in C, with performance and customizability in mind. 
 
-[Oh My Posh](https://github.com/JanDeDobbeleer/oh-my-posh) ; terminal prompt customization 
-
-// [tty-clock](https://github.com/xorg62/tty-clock) ; Terminal date and time ; to be removed
-
-[qView](https://github.com/jurplel/qView) ; Terminal image viewer
+[tty-clock](https://github.com/xorg62/tty-clock) ; Terminal date and time using NCurses
 
 [mpv](https://github.com/mpv-player/mpv) ; Terminal Media (audio & video) player
+
+[qalc](https://github.com/Qalculate/libqalculate) ; Qalculate CLI Caculator
 
 <br>
 
@@ -107,6 +105,6 @@ __Utilities__
 
 [CopyQ](https://github.com/hluk/CopyQ) ; clipboard manager
 
-[Qalculate](https://github.com/Qalculate/qalculate-gtk) ; caculator
+[PwvuControl](https://github.com/saivert/pwvucontrol) ; Volume Control
 
-[PavuControl](https://gitlab.freedesktop.org/pulseaudio/pavucontrol) ; Volume Control
+[qView](https://github.com/jurplel/qView) ; Minimal image viewer
