@@ -22,18 +22,6 @@ Base:
 
 ## Desktop Environment / Window Manager
 
-// To be removed until ...
-
-#### DE
-
-[Fedora Workstation](https://fedoraproject.org/workstation/) ; GNOME DE
-
-- [GNOME Extensions Manager](https://github.com/mjakeman/extension-manager)
-- [GNOME Tweaks Tool](https://gitlab.gnome.org/GNOME/gnome-tweaks)
-- [PaperWM](https://github.com/paperwm/PaperWM)
-- [Open Bar](https://github.com/neuromorph/openbar)
-- [Just Perfection](https://gitlab.gnome.org/jrahmatzadeh/just-perfection)
-
 #### WM
 
 // ...
@@ -43,12 +31,12 @@ __Environment__
 
 Full Wayland <br>
 -> [Niri](https://github.com/YaLTeR/niri) ; A scrollable-tiling Wayland compositor.
----> [XWayland using AwesomeWM](https://github.com/YaLTeR/niri/wiki/Xwayland#directly-running-xwayland-in-rootful-mode)
 
-Full X11 <br>
--> [AwesomeWM](https://github.com/awesomeWM/awesome) ; highly configurable, next generation framework window manager for X.
+---> [XWayland using xwayland-satellite](https://github.com/YaLTeR/niri/wiki/Xwayland#using-xwayland-satellite)
 
-Base / Backup <br>
+<br>
+
+Base / Backup
 -> [KDE Plasma](https://invent.kde.org/plasma) ;  a desktop environment that adapts to your needs and offers a beautiful and user-friendly interface.  
 
 <br><br>
@@ -62,8 +50,6 @@ __Utilities__
 [Fuzzel](https://codeberg.org/dnkl/fuzzel) >> [Wofi](https://sr.ht/~scoopta/wofi/) ; App launcher ; can be customized to do/be other things
 
 [Mako](https://github.com/emersion/mako) ; Notification service ; searching for alternatives
-
-[wlogout](https://github.com/ArtsyMacaw/wlogout) ; Powermenu
 
 <br><br>
 
