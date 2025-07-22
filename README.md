@@ -5,8 +5,6 @@ rename folder to sys_<folder_name> && Add in /usr/share/*
 
 [Cursor](https://github.com/ful1e5/Bibata_Cursor) ; Bibata cursor theme 
 
-[Icons](https://github.com/vinceliuice/Tela-circle-icon-theme) ; Tela Circle Icon Theme 
-
 [Font](https://github.com/0xType/0xProto) ; 0xProto Nerd Fonts 
 
 App Theme ; [Gtk](https://github.com/vinceliuice/Lavanda-gtk-theme) && [Qt](https://github.com/vinceliuice/Lavanda-kde) ; Lavanda Sea Dark
@@ -45,9 +43,11 @@ __Utilities__
 
 <br>
 
+[Quickshell](https://git.outfoxxed.me/quickshell/quickshell) ; Toolkit for building desktop components using QtQuick 
+
 [Waybar](https://github.com/Alexays/Waybar) ; Bar / Panel for Wayland
 
-[Fuzzel](https://codeberg.org/dnkl/fuzzel) >> [Wofi](https://sr.ht/~scoopta/wofi/) ; App launcher ; can be customized to do/be other things
+[Fuzzel](https://codeberg.org/dnkl/fuzzel) ; App launcher ; can be customized to do/be other things via `--dmenu` option
 
 [Mako](https://github.com/emersion/mako) ; Notification service ; searching for alternatives
 
