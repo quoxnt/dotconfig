@@ -1,8 +1,0 @@
-[Unit]
-PartOf=graphical-session.target
-After=graphical-session.target
-Requisite=graphical-session.target
-
-[Service]
-ExecStart=/usr/bin/swaybg -i "/home/jarod/Pictures/shiori_ponytail_4k_3.png"
-Restart=on-failure
